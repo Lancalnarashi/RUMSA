@@ -429,3 +429,98 @@ button { color: inherit; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+/* =========================
+   人物檔案頁
+========================= */
+
+.character-hero {
+  padding-top: 150px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.character-hero h1 {
+  margin: 10px 0 20px;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.character-hero > p:last-child {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.9;
+  opacity: 0.75;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  padding-bottom: 100px;
+}
+
+.character-card {
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.035);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.75);
+}
+
+.character-card img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.character-card-content {
+  padding: 28px;
+}
+
+.character-card-content h2 {
+  margin: 6px 0 14px;
+  font-size: 2rem;
+}
+
+.character-card-content > p {
+  line-height: 1.8;
+}
+
+.character-role {
+  margin: 0;
+  color: #d8b760;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+}
+
+.character-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 24px;
+}
+
+.character-tags span {
+  padding: 7px 12px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 760px) {
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card img {
+    height: 360px;
+  }
+}
