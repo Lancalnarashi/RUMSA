@@ -1612,3 +1612,36 @@ button { color: inherit; }
     align-self: center;
   }
 }
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid rgba(212, 172, 70, 0.25);
+  border-left: 1px solid rgba(212, 172, 70, 0.25);
+  margin-top: 40px;
+}
+
+.profile-info-item {
+  padding: 24px 28px;
+  border-right: 1px solid rgba(212, 172, 70, 0.25);
+  border-bottom: 1px solid rgba(212, 172, 70, 0.25);
+}
+
+.profile-info-item span {
+  display: block;
+  margin-bottom: 8px;
+  color: #777;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.profile-info-item strong {
+  color: #f5f2ea;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .profile-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
