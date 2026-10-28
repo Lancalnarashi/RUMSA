@@ -1743,3 +1743,32 @@ button { color: inherit; }
   .notice-body { margin-left: 0; padding: 0 14px 26px; }
   .notice-footnote { line-height: 1.9; }
 }
+
+/* Student societies */
+.club-explorer { scroll-margin-top: 105px; }
+.campus-card.wide.club-explorer { align-items: stretch; }
+.club-explorer .club-explorer-intro { display: flex; flex-direction: column; justify-content: center; padding: 36px; }
+.club-explorer-intro > p:not(.card-kicker) { font-size: 14px; }
+.club-picker { margin-top: 20px; }
+.club-picker[hidden] { display: none; }
+.club-picker label { display: block; margin-bottom: 9px; color: var(--gold-light); font-size: 13px; }
+.club-picker select { display: block; width: 100%; min-height: 50px; padding: 11px 38px 11px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-soft); color: var(--text); color-scheme: dark; font: inherit; font-size: 14px; cursor: pointer; }
+.club-picker select:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+.club-explorer .club-selection-status { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+.club-explorer .club-explorer-note { margin: 24px 0 0; color: var(--muted); font-size: 12px; }
+.club-explorer .club-profile { min-width: 0; padding: 36px; border-left: 1px solid var(--line); background: radial-gradient(ellipse at top right, rgba(200,167,103,.10), transparent 75%); }
+.club-category { display: inline-block; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--gold-light); font-size: 11px; letter-spacing: .08em; }
+.club-profile h4 { margin: 20px 0 2px; font-family: "Noto Serif TC", Georgia, serif; font-size: clamp(28px, 3vw, 38px); font-weight: 500; line-height: 1.4; }
+.club-profile .club-en { margin: 0; color: var(--gold); font-family: Georgia, serif; font-size: 13px; letter-spacing: .04em; }
+.club-profile .club-description { margin: 22px 0; color: #c7c2b8; font-size: 14px; line-height: 1.95; }
+.club-profile .club-field-label { margin: 0 0 10px; color: var(--muted); font-size: 12px; }
+.club-activities { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.club-activities li { padding: 6px 11px; border: 1px solid var(--line); border-radius: 8px; color: var(--gold-light); font-size: 12px; }
+.club-location { display: grid; grid-template-columns: 64px minmax(0,1fr); gap: 14px; margin: 24px 0 0; padding-top: 20px; border-top: 1px solid var(--white-line); font-size: 12px; }
+.club-location dt { color: var(--muted); }
+.club-location dd { margin: 0; color: var(--text); overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .club-explorer .club-explorer-intro, .club-explorer .club-profile { padding: 26px 22px; }
+  .club-explorer .club-profile { border-left: 0; border-top: 1px solid var(--line); }
+  .club-picker select { font-size: 16px; }
+}
