@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#5b54d6">
+  <meta name="description" content="萊茵同學會：RUMSA 非官方學生論壇。從選課、宿舍到十二學院系所，課本以外的校園生活都在這裡。">
+  <title>萊茵同學會｜RUMSA 學生論壇</title>
+  <link rel="stylesheet" href="forum.css?v=20261028-1">
+  <script src="forum.js?v=20261028-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到討論內容</a>
+  <header class="forum-header">
+    <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="開啟看板選單" aria-expanded="false" aria-controls="sidebar">☰</button>
+    <a class="forum-brand" href="#view=home" aria-label="萊茵同學會首頁"><span class="brand-symbol">r<span>.</span></span><span><strong>萊茵同學會</strong><small>RUMSA STUDENT COMMUNITY</small></span></a>
+    <form class="header-search" id="searchForm" role="search"><label class="sr-only" for="postSearch">搜尋討論、關鍵字或暱稱</label><span aria-hidden="true">⌕</span><input id="postSearch" type="search" maxlength="100" placeholder="搜尋討論、關鍵字或暱稱" autocomplete="off"><button type="submit" aria-label="搜尋">搜尋</button></form>
+    <a class="official-link" href="index.html">回大學官網 ↗</a>
+    <button class="write-button" type="button" data-action="compose"><span aria-hidden="true">＋</span> 發文</button>
+    <a class="my-avatar" href="#view=mine" aria-label="我的貼文">我</a>
+  </header>
+  <button class="sidebar-shade" id="sidebarShade" type="button" aria-label="關閉看板選單" hidden></button>
+  <div class="forum-layout">
+    <aside class="sidebar" id="sidebar" aria-label="論壇導覽">
+      <div class="sidebar-scroll">
+        <p class="nav-caption">一起聊聊</p>
+        <nav class="primary-nav" id="primaryNav" aria-label="討論分類"></nav>
+        <div class="sidebar-heading"><p class="nav-caption">生活看板</p><a href="#view=boards" aria-label="瀏覽全部看板">全部 ↗</a></div>
+        <nav class="board-nav" id="communityNav" aria-label="生活看板"></nav>
+        <div class="sidebar-heading"><p class="nav-caption">學院與系所</p><span id="departmentCount"></span></div>
+        <label class="board-search"><span class="sr-only">尋找學院、科系或看板</span><input id="sidebarSearch" type="search" placeholder="找找你的學院或科系" autocomplete="off"></label>
+        <nav id="facultyNav" class="faculty-nav" aria-label="學院與系所看板"></nav>
+        <p class="sidebar-empty" id="sidebarEmpty" hidden>沒有符合的系所，換個關鍵字試試。</p>
+        <footer class="sidebar-footer"><strong>課本以外，也有同學。</strong><p>非官方世界觀論壇<br>內建討論與人物皆為虛構創作。</p><a href="index.html">返回 RUMSA 校園 ↗</a></footer>
+      </div>
+    </aside>
+    <main id="main" tabindex="-1"><div id="mainContent"></div><noscript><section class="empty-panel"><h1>歡迎來到萊茵同學會</h1><p>請開啟瀏覽器的 JavaScript，以瀏覽看板與討論串。</p><a href="index.html">回大學官網</a></section></noscript></main>
+    <aside class="right-rail" aria-label="校園話題"><div id="rightRail"></div></aside>
+  </div>
+  <dialog id="composeDialog" class="compose-dialog" aria-labelledby="composeTitle">
+    <form id="composeForm">
+      <div class="dialog-heading"><div><p class="mini-label">YOUR CAMPUS, YOUR VOICE</p><h2 id="composeTitle">想聊點什麼？</h2></div><button class="icon-button" id="closeCompose" type="button" aria-label="關閉發文視窗">×</button></div>
+      <p class="local-note">這是虛構校園的個人論壇體驗。你的貼文與回覆僅自己可見，會保存在這個瀏覽器。</p>
+      <div class="form-columns"><label>發文看板<select id="composeBoard" name="board" required></select></label><label>你的暱稱<input id="composeNickname" name="nickname" maxlength="18" placeholder="例如：晚八的拿鐵" required></label></div>
+      <label>貼文標題<input id="composePostTitle" name="title" maxlength="80" placeholder="用一句話說說你想聊的事" required></label>
+      <label>內容<textarea id="composeBody" name="body" rows="7" maxlength="6000" placeholder="分享你的校園日常，或把想問的問題寫下來……" required></textarea></label>
+      <p class="form-error" id="composeError" role="alert"></p>
+      <div class="dialog-footer"><span>友善討論，尊重每一位同學。</span><button class="write-button" type="submit">發布貼文 ↗</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
