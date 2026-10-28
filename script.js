@@ -66,3 +66,32 @@ filterButtons.forEach((button) => {
     updateFacultyCards();
   });
 });
+
+
+const noticeFilters = document.querySelector('.notice-filters');
+const noticeItems = [...document.querySelectorAll('.notice-item')];
+const noticeCount = document.querySelector('.notice-count');
+
+if (noticeFilters && noticeCount) {
+  noticeFilters.hidden = false;
+  const noticeButtons = [...noticeFilters.querySelectorAll('[data-notice-filter]')];
+  noticeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const category = button.dataset.noticeFilter;
+      let count = 0;
+      noticeItems.forEach((item) => {
+        item.hidden = category !== 'all' && item.dataset.noticeCategory !== category;
+        if (item.hidden) item.open = false;
+        else count += 1;
+      });
+      noticeButtons.forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-pressed', String(selected));
+      });
+      noticeCount.textContent = category === 'all'
+        ? `共 ${count} 則公告`
+        : `${button.textContent}・共 ${count} 則公告`;
+    });
+  });
+}
