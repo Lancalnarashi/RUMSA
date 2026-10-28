@@ -6,7 +6,7 @@
   <meta name="description" content="阿爾特萊茵皇家醫學大學 RUMSA 官方世界觀網站" />
   <meta name="theme-color" content="#0a0a0c" />
   <title>RUMSA｜阿爾特萊茵皇家醫學大學</title>
-  <link rel="stylesheet" href="styles.css?v=20261028-announcements" />
+  <link rel="stylesheet" href="styles.css?v=20261028-clubs" />
 </head>
 <body class="home-page">
   <div class="noise" aria-hidden="true"></div>
@@ -35,6 +35,7 @@
   <a href="#research">研究體系</a>
   <a href="#campus">校園生活</a>
   <a href="#events">年度活動</a>
+  <a href="#clubs">學生社團</a>
   <a href="characters.html">人物檔案</a>
   <a href="stories.html">故事紀錄</a>
 </nav>
@@ -393,13 +394,40 @@
           <div class="campus-visual market-visual" aria-hidden="true"><span>WINTER MARKET</span></div>
           <div><p class="card-kicker">城市傳統</p><h3>冬季市集</h3><p>每年十二月，主廣場會被燈飾、熱飲、音樂與雪覆蓋。</p></div>
         </article>
-        <article class="campus-card wide reveal">
-          <div>
-            <p class="card-kicker">學生組織</p><h3>從外科社到午夜咖啡社</h3>
-            <p>校內擁有數百個社團，包括古典文學會、高爾夫球社、網球、攀岩社、、管弦樂團、擊劍社、馬術社、城堡探索社、洞穴探險社與學生會，創校至今超過數百萬學生帶來不一樣的活力。</p>
+        <article class="campus-card wide club-explorer reveal" id="clubs" aria-labelledby="clubs-title">
+          <div class="club-explorer-intro">
+            <p class="card-kicker">STUDENT SOCIETIES · 學生社團</p>
+            <h3 id="clubs-title">從外科社到午夜咖啡社</h3>
+            <p>校內擁有數百個社團。從學術研究、藝文音樂到運動與城市探索，每一種熱情，都能在阿爾特萊茵找到同行的人。</p>
+            <div class="club-picker" hidden>
+              <label for="clubSelect">探索不同社團</label>
+              <select id="clubSelect" aria-controls="clubProfile">
+                <option value="surgery">外科社｜醫學與研究</option>
+                <option value="radiochemistry">放射化學社｜醫學與研究</option>
+                <option value="midnight-coffee">午夜咖啡社｜交流與日常</option>
+                <option value="classics">古典文學會｜藝文與音樂</option>
+                <option value="golf">高爾夫球社｜運動與競技</option>
+                <option value="tennis">網球社｜運動與競技</option>
+                <option value="climbing">攀岩社｜運動與競技</option>
+                <option value="orchestra">管弦樂團｜藝文與音樂</option>
+                <option value="fencing">擊劍社｜運動與競技</option>
+                <option value="equestrian">馬術社｜運動與競技</option>
+                <option value="castle-exploration">城堡探索社｜探索與踏查</option>
+                <option value="caving">洞穴探險社｜探索與踏查</option>
+                <option value="student-union">學生會｜交流與日常</option>
+              </select>
+              <p class="club-selection-status" id="clubSelectionStatus" role="status" aria-live="polite" aria-atomic="true">目前瀏覽：外科社</p>
+            </div>
+            <p class="club-explorer-note">社團活動與集合安排，以學生會及各社團公告為準。</p>
           </div>
-          <div class="club-cloud" aria-label="社團名稱">
-            <span>Orchestra</span><span>Fencing</span><span>Radiochemistry</span><span>Midnight Coffee</span><span>Equestrian</span><span>Surgery Society</span><span>Castle Exploration</span>
+          <div class="club-profile" id="clubProfile" role="region" aria-labelledby="clubName">
+            <span class="club-category" id="clubCategory">醫學與研究</span>
+            <h4 id="clubName">外科社</h4>
+            <p class="club-en" id="clubEnglish">Surgery Society</p>
+            <p class="club-description" id="clubDescription">從一場病例討論開始，練習看見臨床問題背後的人。外科社連結醫學院與健康科學院，讓對外科有興趣的學生在模擬教學與經驗分享中探索志向。</p>
+            <p class="club-field-label">社團活動</p>
+            <ul class="club-activities" id="clubActivities"><li>模擬教學觀摩</li><li>病例討論</li><li>外科職涯分享</li></ul>
+            <dl class="club-location"><dt>活動地點</dt><dd id="clubPlace">醫學院模擬教學空間</dd></dl>
           </div>
         </article>
       </div>
@@ -446,7 +474,7 @@
     <p>Scientia Custodit Vitam.</p>
   </footer>
 
-  <script src="script.js?v=20261028-announcements"></script>
+  <script src="script.js?v=20261028-clubs"></script>
 </body>
 </html>
 <!-- trigger pages rebuild -->
